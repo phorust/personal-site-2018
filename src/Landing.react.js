@@ -1,34 +1,12 @@
 import React from 'react';
+import JAPAN_VIDEO from './static/00136_4.mp4';
 
-class Landing extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {showHider: true};
-  }
-
-  componentDidMount() {
-    setTimeout(() => this.setState({showHider: false}), 5000);
-  }
-
-  render() {
-    const {showHider} = this.state;
-    const hider = showHider ? <div id="hider" /> : null;
-    return (
-      <div className="page black">
-        <iframe
-          src="https://player.vimeo.com/video/213032482?autoplay=1"
-          width="720"
-          height="480"
-          frameBorder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowFullScreen
-          title="Japan Travel Video"
-        />
-        {hider}
-      </div>
-    );
-  }
-}
+const Landing = () => (
+  <div className="page black">
+    <video autoPlay loop>
+      <source src={JAPAN_VIDEO} type="video/mp4" />
+    </video>
+  </div>
+);
 
 export default Landing;

@@ -67,20 +67,21 @@ a {
 
 .page.black {
   background: black;
+  overflow: hidden;
 }
+.page.black video {
+  /* from stack overflow
+   * https://stackoverflow.com/questions/10797632/simulate-background-sizecover-on-video-or-img
+   */
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
 
-.page.black iframe {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
-  border: none;
-}
-#hider {
-  width: 100vw;
-  height: 90px;
-  background-color: black;
-  position: absolute;
-  top: calc(100vh - 90px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .theOne {
