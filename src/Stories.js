@@ -1,23 +1,22 @@
 import React from 'react';
 
-const TextColumn = (props) => (
-  <div className={`textColumn ${props.align || ''}`}>
-    {props.children}
-  </div>
+const TextColumn = props => (
+  <div className={`textColumn ${props.align || ''}`}>{props.children}</div>
 );
 
-const TextColumnMiddle = (props) => (
+const TextColumnMiddle = props => (
   <TextColumn {...{...props, align: 'middle'}} />
 );
 
-const TextColumnBottom = (props) => (
+const TextColumnBottom = props => (
   <TextColumn {...{...props, align: 'bottom'}} />
 );
 
 const Spacer = () => (
-  <div style={{flexGrow: 0, flexShrink: 0, flexBasis: '15vw'}}/>
+  <div style={{flexGrow: 0, flexShrink: 0, flexBasis: '15vw'}} />
 );
 
+// prettier-ignore
 const Stories = {
   "those years will come someday": (photos) => (
     <React.Fragment>
@@ -36,8 +35,7 @@ least that's how it feels.`
       </TextColumnBottom>
       <Spacer/>
       {photos['./79068TAngu082808-R4-120.jpg']}
-      <TextColumn>
-      </TextColumn>
+      <TextColumn />
       <TextColumnBottom>
 {
 `i wanna tell you that you're cool,
@@ -49,8 +47,7 @@ or just kick it, if that's cool,
 `
 }
       </TextColumnBottom>
-      <TextColumn>
-      </TextColumn>
+      <TextColumn />
       {photos['./85740MSlee103002-R1-003.jpg']}
       <TextColumn>
 {
@@ -123,14 +120,12 @@ and i think that's ok.
     </React.Fragment>
   ),
 
-
-
-
 "oakland just yesterday": (photos) =>
   <React.Fragment><Spacer/><Spacer/>{photos}</React.Fragment>,
 
 "ghosts": (photos) =>
   <React.Fragment><Spacer/><Spacer/>{photos}</React.Fragment>,
+
 "milkfat": (photos) =>
   <React.Fragment>{photos}</React.Fragment>,
 
