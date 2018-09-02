@@ -92,7 +92,6 @@ a {
   font-size: 15px;
   line-height: 21px;
   width: 305px;
-  background: rgba(255,255,255,1);
   max-height: 540px;
   height: 70%;
   padding: 20px 40px;
@@ -129,6 +128,16 @@ a {
   height: calc(21px * 0.2);
   margin-top: calc(21px * 0.4);
   margin-bottom: calc(21px * 0.4);
+}
+.mePhoto {
+  position: absolute;
+  bottom: 20vh;
+  left: 24vw;
+  width: 64vw;
+  height: 64vh;
+}
+.mePhoto > img {
+  height: 100%;
 }
 
 .photowrapper {
