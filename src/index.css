@@ -22,6 +22,10 @@ a {
   color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 .brutalism {
   width: 300vw;
 }
@@ -284,6 +288,62 @@ nav a:hover {
 }
 nav a:hover .navMenu {
   display: block;
+}
+
+.blogEntry {
+  height: 100vh;
+  position: relative;
+}
+.blogEntry:nth-child(odd) {
+  background-color: #c2ad9f;
+}
+.blogEntry:nth-child(even) {
+  background-color: #937d6f;
+}
+.coverImages {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.coverImages > img.coverImage {
+  position: absolute;
+  right: 1vw;
+  height: 72vh;
+  top: 12vh;
+}
+.coverImages > img.coverImage.two {
+  top: -20vh;
+  height: 36vh;
+  left: 20vw;
+}
+.coverImages > img.coverImage.three {
+  left: 32vw;
+  height: 36vh;
+  top: 80vh;
+}
+.blogBlurb {
+  position: absolute;
+  left: 5vw;
+  top: 20vh;
+  width: 15vw;
+
+  font-family: "Source Code Pro", sans-serif;
+  color: white;
+}
+.blogBlurb > img {
+  height: 36vh;
+}
+.blogBlurb > h1 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2em;
+}
+.blogBlurb > p {
+  font-size: 8pt;
+}
+.blogBlurb > .line {
+  height: 21px;
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {

@@ -5,6 +5,7 @@ import Landing from './Landing.react';
 import Story from './Story.react';
 import About from './About.react';
 import Topbar from './Topbar.react';
+import Blog from './Blog.react';
 import './App.css';
 
 const Mix = () => (
@@ -36,6 +37,10 @@ const routes = [
   {
     path: '/about',
     main: About,
+  },
+  {
+    path: '/blog',
+    main: Blog,
   },
 ];
 
