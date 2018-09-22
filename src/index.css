@@ -295,29 +295,38 @@ nav a:hover .navMenu {
 
 .blogEntry {
   height: 100vh;
-  position: relative;
   background-color: #d3d8dc;
   font-family: "Source Code Pro", sans-serif;
+}
+.blogEntryInner {
+  height: 100%;
+  max-height: 930px;
+  position: relative;
   overflow: scroll;
   white-space: nowrap;
+  transform: translateY(-50%);
+  top: 50%;
 }
-.blogEntry p {
+.blogEntryInner p {
   font-size: 8pt;
 }
-.blogEntry .photo {
+.blogEntryInner .photo {
   position: relative;
   display: inline-block;
-  height: 98vh;
-  top: 1vh;
+  height: 98%;
+  top: 1%;
   margin-right: 48px;
 }
-.blogEntry .photo > img {
+.blogEntryInner .photo > img {
   height: 100%;
+  width: auto;
   z-index: 1;
 }
-.blogEntry .photo.inset > img {
-  padding: 15% 30%;
+.blogEntryInner .photo.inset {
+  padding: 8% 16%;
   box-sizing: border-box;
+  /* for some reason adding padding here moves the entire div down; correct */
+  top: -16%;
 }
 .blogBlurb {
   position: absolute;
