@@ -11,6 +11,9 @@ body, html, #root {
 ::-webkit-scrollbar {
   display: none;
 }
+::selection {
+  background: white;
+}
 
 * {
   -webkit-overflow-scrolling: touch;
@@ -293,57 +296,64 @@ nav a:hover .navMenu {
 .blogEntry {
   height: 100vh;
   position: relative;
+  background-color: #d3d8dc;
+  font-family: "Source Code Pro", sans-serif;
+  overflow: scroll;
+  white-space: nowrap;
 }
-.blogEntry:nth-child(odd) {
-  background-color: #c2ad9f;
+.blogEntry p {
+  font-size: 8pt;
 }
-.blogEntry:nth-child(even) {
-  background-color: #937d6f;
+.blogEntry .photo {
+  position: relative;
+  display: inline-block;
+  height: 98vh;
+  top: 1vh;
+  margin-right: 48px;
 }
-.coverImages {
-  position: absolute;
-  width: 100%;
+.blogEntry .photo > img {
   height: 100%;
+  z-index: 1;
 }
-.coverImages > img.coverImage {
-  position: absolute;
-  right: 1vw;
-  height: 72vh;
-  top: 12vh;
-}
-.coverImages > img.coverImage.two {
-  top: -20vh;
-  height: 36vh;
-  left: 20vw;
-}
-.coverImages > img.coverImage.three {
-  left: 32vw;
-  height: 36vh;
-  top: 80vh;
+.blogEntry .photo.inset > img {
+  padding: 15% 30%;
+  box-sizing: border-box;
 }
 .blogBlurb {
   position: absolute;
   left: 5vw;
-  top: 20vh;
+  top: 15vh;
   width: 15vw;
-
-  font-family: "Source Code Pro", sans-serif;
-  color: white;
 }
 .blogBlurb > img {
-  height: 36vh;
+  height: 500px;
 }
 .blogBlurb > h1 {
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 2em;
-}
-.blogBlurb > p {
-  font-size: 8pt;
+  margin-bottom: 8px;
 }
 .blogBlurb > .line {
   height: 21px;
   margin: 0;
+}
+.columnsText {
+  position: absolute;
+  /*columns: 2 auto;*/
+  /*column-fill: auto;*/
+  width: 200px;
+  color: white;
+  white-space: initial;
+  z-index: 2;
+}
+.flavorText {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  color: white;
+  letter-spacing: 2em;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 768px) {
