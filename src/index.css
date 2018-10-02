@@ -419,11 +419,16 @@ nav a:hover .navMenu {
     background: white;
   }
 
-  nav .section {
+  nav .section, 
+  nav .section a {
     background: black;
     color: white;
   }
-  .black nav .section {
+  nav .section a.active {
+    color: red;
+  }
+  .black nav .section,
+  .black nav .section a {
     background: white;
     color: black;
   }

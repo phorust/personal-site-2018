@@ -1,5 +1,5 @@
 import React from 'react';
-import Stories from './Stories';
+import Print from './Print';
 import {Gallery} from './Photos.react';
 import SinglePhotoGallery from './SinglePhotoGallery.react';
 
@@ -28,7 +28,7 @@ const stories = {
   ),
 };
 
-const Story = props => {
+const PrintPage = (props: {match: {params: {[string]: string}}}) => {
   const {match} = props;
   const photoElems = stories[match.params.set];
   const gallery =
@@ -51,9 +51,9 @@ const Story = props => {
         ]}
       />
     ) : (
-      <Gallery>{Stories[match.params.set](photoElems)}</Gallery>
+      <Gallery>{Print[match.params.set](photoElems)}</Gallery>
     );
   return <div className="story">{gallery}</div>;
 };
 
-export default Story;
+export default PrintPage;

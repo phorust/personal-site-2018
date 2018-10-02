@@ -53,31 +53,25 @@ const TopbarDesktop = props => (
         places
       </Menu>
       {' · '}
-      <a
-        href="https://soundcloud.com/mngyuan/sets/things-i-never-said-to-you-beattape"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        mix
-      </a>
-      {' · '}
       <Menu
         menuContent={
           <div>
-            <NavLink to={{pathname: `/stories/oakland just yesterday`}}>
+            <NavLink to={{pathname: `/print/milkfat`}}>milkfat</NavLink>
+            <br />
+            <NavLink to={{pathname: `/print/oakland just yesterday`}}>
               oakland, just yesterday
             </NavLink>
             <br />
-            <NavLink to={{pathname: `/stories/ghosts`}}>ghosts</NavLink>
-            <br />
-            <NavLink to={{pathname: `/stories/milkfat`}}>milkfat</NavLink>
+            <NavLink to={{pathname: `/print/ghosts`}}>ghosts</NavLink>
             <br />
           </div>
         }
-        menuHref="/stories/oakland just yesterday"
+        menuHref="/print/oakland just yesterday"
       >
-        story
+        print
       </Menu>
+      {' · '}
+      <Link to={{pathname: '/blog'}}>blog</Link>
       {' · '}
       <Link to={{pathname: '/about'}}>about</Link>
     </nav>
@@ -116,24 +110,22 @@ const TopbarMobile = props => (
         <br />
         <NavLink to={{pathname: `/photos/iceland`}}>iceland</NavLink>
       </div>
-      <a
-        href="https://soundcloud.com/mngyuan/sets/things-i-never-said-to-you-beattape"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        mix
-      </a>
       <div>
-        <span className="section">story</span>
+        <span className="section">print</span>
         <br />
-        <NavLink to={{pathname: `/stories/oakland just yesterday`}}>
+        <NavLink to={{pathname: `/print/milkfat`}}>milkfat</NavLink>
+        <br />
+        <NavLink to={{pathname: `/print/oakland just yesterday`}}>
           oakland, just yesterday
         </NavLink>
         <br />
-        <NavLink to={{pathname: `/stories/ghosts`}}>ghosts</NavLink>
+        <NavLink to={{pathname: `/print/ghosts`}}>ghosts</NavLink>
         <br />
-        <NavLink to={{pathname: `/stories/milkfat`}}>milkfat</NavLink>
-        <br />
+      </div>
+      <div>
+        <span className="section">
+          <NavLink to={{pathname: `/blog`}}>blog</NavLink>
+        </span>
       </div>
     </nav>
   </div>

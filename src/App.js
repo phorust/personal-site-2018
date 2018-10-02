@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, withRouter} from 'react-router-dom';
 import Photos from './Photos.react';
 import Landing from './Landing.react';
-import Story from './Story.react';
+import PrintPage from './PrintPage.react';
 import About from './About.react';
 import Topbar from './Topbar.react';
 import Blog from './Blog.react';
@@ -31,8 +31,8 @@ const routes = [
     main: Mix,
   },
   {
-    path: '/stories/:set',
-    main: Story,
+    path: '/print/:set',
+    main: PrintPage,
   },
   {
     path: '/about',
