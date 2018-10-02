@@ -206,6 +206,11 @@ h1, h2, h3, h4, h5, h6, p {
   right: 0;
   cursor: e-resize;
 }
+.photowrapperInner.single > img {
+  /* the cover of milkfat is fitting strangely */
+  object-fit: contain;
+  width: 100%;
+}
 .mobileOnly {
   display: none;
 }
