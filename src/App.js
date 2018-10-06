@@ -6,6 +6,7 @@ import PrintPage from './PrintPage.react';
 import About from './About.react';
 import Topbar from './Topbar.react';
 import Blog from './Blog.react';
+import Video from './Video.react';
 import './App.css';
 
 const Mix = () => (
@@ -25,6 +26,10 @@ const routes = [
   {
     path: '/photos/:set',
     main: Photos,
+  },
+  {
+    path: '/video',
+    main: Video,
   },
   {
     path: '/mix',
@@ -61,7 +66,9 @@ const App = ({location}) => (
         component={route.main}
       />
     ))}
-    <Topbar black={location.pathname === '/'} />
+    <Topbar
+      black={location.pathname === '/' || location.pathname === '/video'}
+    />
   </div>
 );
 

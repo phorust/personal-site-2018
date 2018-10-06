@@ -249,6 +249,11 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: flex-end;
 }
 
+.videowrapper > iframe {
+  height: 360px;
+  float: right;
+}
+
 .topbar {
   position: fixed;
   top: 0;

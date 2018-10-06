@@ -15,47 +15,13 @@ const TopbarDesktop = props => (
       <Link to={{pathname: '/'}}>mngyuan 梦远</Link>
     </div>
     <nav>
-      <Menu
-        menuHref="/photos/アイスクリーム"
-        menuContent={
-          <div>
-            <NavLink to={{pathname: `/photos/アイスクリーム`}}>
-              アイスクリーム
-            </NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/before`}}>before </NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/family`}}>family </NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/but you`}}>but you </NavLink>
-          </div>
-        }
-      >
-        people
-      </Menu>
-      {' · '}
-      <Menu
-        menuHref="/photos/asian"
-        menuContent={
-          <div>
-            <NavLink to={{pathname: `/photos/asian`}}>asia</NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/americana`}}>americana</NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/the drive home`}}>
-              the drive home
-            </NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/iceland`}}>iceland</NavLink>
-          </div>
-        }
-      >
-        places
+      <Menu menuHref="/photos/アイスクリーム" menuContent={<React.Fragment />}>
+        photo
       </Menu>
       {' · '}
       <Menu
         menuContent={
-          <div>
+          <React.Fragment>
             <NavLink to={{pathname: `/print/milkfat`}}>milkfat</NavLink>
             <br />
             <NavLink to={{pathname: `/print/oakland just yesterday`}}>
@@ -64,12 +30,14 @@ const TopbarDesktop = props => (
             <br />
             <NavLink to={{pathname: `/print/ghosts`}}>ghosts</NavLink>
             <br />
-          </div>
+          </React.Fragment>
         }
         menuHref="/print/oakland just yesterday"
       >
         print
       </Menu>
+      {' · '}
+      <Link to={{pathname: '/video'}}>video</Link>
       {' · '}
       <Link to={{pathname: '/blog'}}>blog</Link>
       {' · '}
@@ -85,30 +53,8 @@ const TopbarMobile = props => (
     </div>
     <nav>
       <div>
-        <span className="section">people</span>
+        <span className="section">photo</span>
         <br />
-        <NavLink to={{pathname: `/photos/アイスクリーム`}}>
-          アイスクリーム
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/before`}}>before </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/family`}}>family </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/but you`}}>but you </NavLink>
-      </div>
-      <div>
-        <span className="section">places</span>
-        <br />
-        <NavLink to={{pathname: `/photos/asian`}}>asia</NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/americana`}}>americana</NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/the drive home`}}>
-          the drive home
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/iceland`}}>iceland</NavLink>
       </div>
       <div>
         <span className="section">print</span>
@@ -120,6 +66,12 @@ const TopbarMobile = props => (
         </NavLink>
         <br />
         <NavLink to={{pathname: `/print/ghosts`}}>ghosts</NavLink>
+        <br />
+      </div>
+      <div>
+        <span className="section">
+          <NavLink to={{pathname: `/video`}}>video</NavLink>
+        </span>
         <br />
       </div>
       <div>
