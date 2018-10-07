@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "flow-bin": "^0.82.0",
     "gh-pages": "^1.0.0",
-    "react-scripts": "^1.0.17",
-    "flow-bin": "^0.82.0"
+    "react-scripts": "^1.0.17"
   },
   "dependencies": {
     "babel": "next",
@@ -20,6 +20,7 @@
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-standard": "^3.1.0",
     "history": "^4.7.2",
+    "mngyuan-lib": "file:/Users/phorust/git/lib/build",
     "prettier": "^1.12.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

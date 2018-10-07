@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const importAll = r => r.keys().map(r);
+import {importAll} from 'mngyuan-lib';
 
 const photos = {
   asian: importAll(

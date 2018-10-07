@@ -7,7 +7,7 @@ const Landing = () => (
       autoPlay
       muted
       onContextMenu={e => e.preventDefault()}
-      onClick={e => (e.target.muted = !e.target.muted)}
+      onClick={e => (e.target.muted = false)}
     >
       <source
         src="https://s3-us-west-2.amazonaws.com/mngyuan-com/00136_4.mp4"

@@ -1,17 +1,9 @@
+import {importAllAsArray} from 'mngyuan-lib';
 import React from 'react';
 import Print from './Print';
 import {Gallery} from './Photos.react';
 import SinglePhotoGallery from './SinglePhotoGallery.react';
 
-// const importAllAsDict = r =>
-// r
-// .keys()
-// .reduce(
-// (agg, cur) => ({...agg, [cur]: <img key={cur} src={r(cur)} />}),
-// {},
-// );
-const importAllAsArray = r =>
-  r.keys().reduce((agg, cur) => [...agg, <img key={cur} src={r(cur)} />], []);
 const stories = {
   'oakland just yesterday': importAllAsArray(
     require.context(

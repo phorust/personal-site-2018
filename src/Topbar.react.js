@@ -32,7 +32,7 @@ const TopbarDesktop = props => (
             <br />
           </React.Fragment>
         }
-        menuHref="/print/oakland just yesterday"
+        menuHref="/print/milkfat"
       >
         print
       </Menu>
