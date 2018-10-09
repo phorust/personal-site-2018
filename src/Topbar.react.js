@@ -39,7 +39,7 @@ const TopbarDesktop = props => (
       {' · '}
       <Link to={{pathname: '/video'}}>video</Link>
       {' · '}
-      <Link to={{pathname: '/blog'}}>blog</Link>
+      <Link to={{pathname: '/blog/mttam'}}>blog</Link>
       {' · '}
       <Link to={{pathname: '/about'}}>about</Link>
     </nav>
@@ -76,7 +76,7 @@ const TopbarMobile = props => (
       </div>
       <div>
         <span className="section">
-          <NavLink to={{pathname: `/blog`}}>blog</NavLink>
+          <NavLink to={{pathname: `/blog/mttam`}}>blog</NavLink>
         </span>
       </div>
     </nav>

@@ -44,7 +44,7 @@ const routes = [
     main: About,
   },
   {
-    path: '/blog',
+    path: '/blog/:post',
     main: Blog,
   },
 ];

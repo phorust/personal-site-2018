@@ -10,7 +10,7 @@ import PHOTO_6 from './photos2/ice cream/L9997645.jpg';
 import PHOTO_7 from './photos2/blog/tam/108891AAle072312-R1-014.jpg';
 import PHOTO_8 from './photos2/blog/tam/108891AAle072312-R1-013.jpg';
 
-const Blog = () => (
+const TamPost = () => (
   <div className="blogEntry">
     <div className="blogEntryInner">
       <div
@@ -180,7 +180,7 @@ const Blog = () => (
       </div>
       <div className="blogBlurb">
         <h1>Mt Tamalpais</h1>
-        <h4>07.15.17</h4>
+        <h4>10.08.18</h4>
         <br />
         <div className="line" />
         <br />
@@ -195,4 +195,12 @@ const Blog = () => (
   </div>
 );
 
-export default Blog;
+const BlogPage = (props: {
+  match: {
+    params: {
+      post: string,
+    },
+  },
+}) => (props.match.params.post === 'mttam' ? <TamPost /> : null);
+
+export default BlogPage;
