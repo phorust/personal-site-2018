@@ -20,7 +20,7 @@ const stories = {
   ),
   'those years will come someday': importAllAsDict(
     require.context(
-      './photos2/those years will come someday',
+      './stories/those years will come someday',
       false,
       /\.(png|jpe?g|svg)$/,
     ),

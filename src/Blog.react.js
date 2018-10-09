@@ -1,14 +1,14 @@
 import React from 'react';
-import BLURB_PHOTO from './photos2/ice cream/L9997552.jpg';
-import COVER_PHOTO from './photos2/ice cream/L9997560.jpg';
-import PHOTO_1 from './photos2/ice cream/L9997541.jpg';
-import PHOTO_2 from './photos2/blog/tam/L9997509.jpg';
-import PHOTO_3 from './photos2/blog/tam/108891AAle072307-R1-032.jpg';
-import PHOTO_4 from './photos2/blog/tam/108891AAle072307-R1-005.jpg';
-import PHOTO_5 from './photos2/blog/tam/108891AAle072307-R1-002.jpg';
-import PHOTO_6 from './photos2/ice cream/L9997645.jpg';
-import PHOTO_7 from './photos2/blog/tam/108891AAle072312-R1-014.jpg';
-import PHOTO_8 from './photos2/blog/tam/108891AAle072312-R1-013.jpg';
+import BLURB_PHOTO from './blog/tam/L9997552.jpg';
+import COVER_PHOTO from './blog/tam/L9997560.jpg';
+import PHOTO_1 from './blog/tam/L9997541.jpg';
+import PHOTO_2 from './blog/tam/L9997509.jpg';
+import PHOTO_3 from './blog/tam/108891AAle072307-R1-032.jpg';
+import PHOTO_4 from './blog/tam/108891AAle072307-R1-005.jpg';
+import PHOTO_5 from './blog/tam/108891AAle072307-R1-002.jpg';
+import PHOTO_6 from './blog/tam/L9997645.jpg';
+import PHOTO_7 from './blog/tam/108891AAle072312-R1-014.jpg';
+import PHOTO_8 from './blog/tam/108891AAle072312-R1-013.jpg';
 
 const TamPost = () => (
   <div className="blogEntry">

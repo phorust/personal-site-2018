@@ -15,7 +15,27 @@ const TopbarDesktop = props => (
       <Link to={{pathname: '/'}}>mngyuan 梦远</Link>
     </div>
     <nav>
-      <Menu menuHref="/photos/アイスクリーム" menuContent={<React.Fragment />}>
+      <Menu
+        menuHref="/photos/thepigs for mcmintea"
+        menuContent={
+          <React.Fragment>
+            <NavLink to={{pathname: `/photos/thepigs for mcmintea`}}>
+              @thepigs for @mcmintea
+            </NavLink>
+            <br />
+            <NavLink to={{pathname: `/photos/kchaooo for oliviashihdesign`}}>
+              @kchaooo for @oliviashihdesign
+            </NavLink>
+            <br />
+            <NavLink to={{pathname: `/photos/lumohn in nyc`}}>
+              @lumohn in nyc
+            </NavLink>
+            <br />
+            <NavLink to={{pathname: `/photos/travel`}}>travel</NavLink>
+            <br />
+          </React.Fragment>
+        }
+      >
         photo
       </Menu>
       {' · '}
@@ -54,6 +74,19 @@ const TopbarMobile = props => (
     <nav>
       <div>
         <span className="section">photo</span>
+        <NavLink to={{pathname: `/photos/thepigs for mcmintea`}}>
+          @thepigs for @mcmintea
+        </NavLink>
+        <br />
+        <NavLink to={{pathname: `/photos/kchaooo for oliviashihdesign`}}>
+          @kchaooo for @oliviashihdesign
+        </NavLink>
+        <br />
+        <NavLink to={{pathname: `/photos/lumohn in nyc`}}>
+          @lumohn in nyc
+        </NavLink>
+        <br />
+        <NavLink to={{pathname: `/photos/travel`}}>travel</NavLink>
         <br />
       </div>
       <div>
