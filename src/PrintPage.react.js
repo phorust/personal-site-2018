@@ -1,4 +1,4 @@
-import {importAllAsArray} from 'mngyuan-lib';
+import {importAllAsArray, importAllAsDict} from 'mngyuan-lib';
 import React from 'react';
 import Print from './Print';
 import {Gallery} from './Photos.react';
@@ -17,6 +17,13 @@ const stories = {
   ),
   milkfat: importAllAsArray(
     require.context('./stories/milkfat', false, /\.(png|jpe?g|svg)$/),
+  ),
+  'those years will come someday': importAllAsDict(
+    require.context(
+      './photos2/those years will come someday',
+      false,
+      /\.(png|jpe?g|svg)$/,
+    ),
   ),
 };
 
