@@ -18,7 +18,7 @@ const TamPost = () => (
       <meta property="og:title" content="mttam | blog · Kevin Lee" />
       <meta property="og:description" content="@mngyuan Kevin Lee" />
       <meta property="og:url" content="http://mngyuan.com/blog/mttam" />
-      <meta property="og:image" content={PHOTO_2} />
+      <meta property="og:image" content={`http://mngyuan.com/${COVER_PHOTO}`} />
       <meta property="og:image:width" content="279" />
       <meta property="og:image:height" content="279" />
     </Helmet>
