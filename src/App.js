@@ -1,5 +1,7 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import {Route, withRouter} from 'react-router-dom';
+
 import Photos from './Photos.react';
 import Landing from './Landing.react';
 import PrintPage from './PrintPage.react';
@@ -7,6 +9,7 @@ import About from './About.react';
 import Topbar from './Topbar.react';
 import Blog from './Blog.react';
 import Video from './Video.react';
+import Sitemap from './Sitemap.react';
 import './App.css';
 
 const Mix = () => (
@@ -47,6 +50,10 @@ const routes = [
     path: '/blog/:post',
     main: Blog,
   },
+  {
+    path: '/sitemap',
+    main: Sitemap,
+  },
 ];
 
 const App = ({location}) => (
@@ -58,6 +65,14 @@ const App = ({location}) => (
   // </div>
   // );
   <div className="container">
+    <Helmet title="Kevin Lee">
+      <meta property="og:image:width" content="279" />
+      <meta property="og:image:height" content="279" />
+      <meta property="og:description" content="@mngyuan" />
+      <meta property="og:url" content="http://mngyuan.com" />
+      <meta property="og:image" content="http://mngyuan.com/og/og-image.jpg" />
+      <meta property="og:title" content="Kevin Lee" />
+    </Helmet>
     {routes.map(route => (
       <Route
         key={route.path}

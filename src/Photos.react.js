@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Helmet from 'react-helmet';
 
 import {importAll} from 'mngyuan-lib';
 
@@ -86,7 +87,12 @@ const Photos = props => {
     <img key={src} src={src} />
   ));
   const elems = ([PREAMBLES[match.params.set]] || []).concat(photoElems);
-  return <Gallery>{elems}</Gallery>;
+  return (
+    <React.Fragment>
+      <Helmet title="photo · Kevin Lee" />
+      <Gallery>{elems}</Gallery>
+    </React.Fragment>
+  );
 };
 
 export default Photos;

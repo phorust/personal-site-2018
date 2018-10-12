@@ -1,5 +1,7 @@
 import {importAllAsArray, importAllAsDict} from 'mngyuan-lib';
 import React from 'react';
+import Helmet from 'react-helmet';
+
 import Print from './Print';
 import {Gallery} from './Photos.react';
 import SinglePhotoGallery from './SinglePhotoGallery.react';
@@ -52,7 +54,12 @@ const PrintPage = (props: {match: {params: {[string]: string}}}) => {
     ) : (
       <Gallery>{Print[match.params.set](photoElems)}</Gallery>
     );
-  return <div className="story">{gallery}</div>;
+  return (
+    <React.Fragment>
+      <Helmet title="print · Kevin Lee" />
+      <div className="story">{gallery}</div>
+    </React.Fragment>
+  );
 };
 
 export default PrintPage;

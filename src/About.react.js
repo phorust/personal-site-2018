@@ -1,8 +1,12 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import ME_PHOTO from './photos/me alameda.jpg';
 
 const About = () => (
   <React.Fragment>
+    <Helmet title="about · Kevin Lee">
+      <meta property="og:image" content={ME_PHOTO} />
+    </Helmet>
     <div className="mePhoto">
       <img src={ME_PHOTO} />
     </div>
