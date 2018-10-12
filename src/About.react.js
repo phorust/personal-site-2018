@@ -1,5 +1,5 @@
 import React from 'react';
-import ME_PHOTO from './photos2/me alameda.jpg';
+import ME_PHOTO from './photos/me alameda.jpg';
 
 const About = () => (
   <React.Fragment>
