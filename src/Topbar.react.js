@@ -74,6 +74,7 @@ const TopbarMobile = props => (
     <nav>
       <div>
         <span className="section">photo</span>
+        <br />
         <NavLink to={{pathname: `/photos/thepigs for mcmintea`}}>
           @thepigs for @mcmintea
         </NavLink>
