@@ -10,8 +10,12 @@ const Menu = props => (
   </div>
 );
 
-const Topbar = props => (
-  <div className={`topbar ${props.black ? 'black' : ''}`}>
+const Topbar = ({location}) => (
+  <div
+    className={`topbar ${
+      location.pathname === '/' || location.pathname === '/video' ? 'black' : ''
+    }`}
+  >
     <div className="nameplate">
       <Link to={{pathname: '/'}}>mngyuan 梦远</Link>
     </div>
