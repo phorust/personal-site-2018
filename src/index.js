@@ -1,8 +1,7 @@
 import {createBrowserHistory} from 'history';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {hydrate, render} from 'react-dom';
 import {Router} from 'react-router-dom';
-import {render} from 'react-snapshot';
 
 import App from './App';
 import './index.css';
@@ -29,9 +28,19 @@ const initGA = (history) => {
 
 initGA(history);
 
-render(
-  <Router history={history}>
-    <App />
-  </Router>,
-  document.getElementById('root'),
-);
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+  hydrate(
+    <Router history={history}>
+      <App />
+    </Router>,
+    rootElement,
+  );
+} else {
+  render(
+    <Router history={history}>
+      <App />
+    </Router>,
+    rootElement,
+  );
+}
