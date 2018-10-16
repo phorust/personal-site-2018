@@ -1,15 +1,16 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import {NavLink, Link} from 'react-router-dom';
 
 const Menu = props => (
-  <Link to={{pathname: props.menuHref}}>
-    {props.children}
+  <div className="section">
+    <Link to={{pathname: props.menuHref}} className="sectionLink">
+      {props.children}
+    </Link>
     <div className="navMenu">{props.menuContent}</div>
-  </Link>
+  </div>
 );
 
-const TopbarDesktop = props => (
+const Topbar = props => (
   <div className={`topbar ${props.black ? 'black' : ''}`}>
     <div className="nameplate">
       <Link to={{pathname: '/'}}>mngyuan 梦远</Link>
@@ -38,7 +39,7 @@ const TopbarDesktop = props => (
       >
         photo
       </Menu>
-      {' · '}
+      <span className="divider">{' · '}</span>
       <Menu
         menuContent={
           <React.Fragment>
@@ -56,76 +57,26 @@ const TopbarDesktop = props => (
       >
         print
       </Menu>
-      {' · '}
-      <Link to={{pathname: '/video'}}>video</Link>
-      {' · '}
-      <Link to={{pathname: '/blog/mttam'}}>blog</Link>
-      {' · '}
-      <Link to={{pathname: '/about'}}>about</Link>
-    </nav>
-  </div>
-);
-
-const TopbarMobile = props => (
-  <div className={`topbar mobile ${props.black ? 'black' : ''}`}>
-    <div className="nameplate">
-      <Link to={{pathname: '/'}}>mngyuan 梦远</Link>
-    </div>
-    <nav>
-      <div>
-        <span className="section">photo</span>
-        <br />
-        <NavLink to={{pathname: `/photos/thepigs for mcmintea`}}>
-          @thepigs for @mcmintea
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/kchaooo for oliviashihdesign`}}>
-          @kchaooo for @oliviashihdesign
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/lumohn in nyc`}}>
-          @lumohn in nyc
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/photos/travel`}}>travel</NavLink>
-        <br />
+      <span className="divider">{' · '}</span>
+      <div className="section">
+        <Link to={{pathname: '/video'}} className="sectionLink">
+          video
+        </Link>
       </div>
-      <div>
-        <span className="section">print</span>
-        <br />
-        <NavLink to={{pathname: `/print/milkfat`}}>milkfat</NavLink>
-        <br />
-        <NavLink to={{pathname: `/print/oakland just yesterday`}}>
-          oakland, just yesterday
-        </NavLink>
-        <br />
-        <NavLink to={{pathname: `/print/ghosts`}}>ghosts</NavLink>
-        <br />
+      <span className="divider">{' · '}</span>
+      <div className="section">
+        <Link to={{pathname: '/blog/mttam'}} className="sectionLink">
+          blog
+        </Link>
       </div>
-      <div>
-        <span className="section">
-          <NavLink to={{pathname: `/video`}}>video</NavLink>
-        </span>
-        <br />
-      </div>
-      <div>
-        <span className="section">
-          <NavLink to={{pathname: `/blog/mttam`}}>blog</NavLink>
-        </span>
+      <span className="divider">{' · '}</span>
+      <div className="section desktopOnly">
+        <Link to={{pathname: '/about'}} className="sectionLink">
+          about
+        </Link>
       </div>
     </nav>
   </div>
-);
-
-const Topbar = props => (
-  <React.Fragment>
-    <MediaQuery query="(max-width: 768px)">
-      <TopbarMobile {...props} />
-    </MediaQuery>
-    <MediaQuery query="(min-width: 768px)">
-      <TopbarDesktop {...props} />
-    </MediaQuery>
-  </React.Fragment>
 );
 
 export default Topbar;

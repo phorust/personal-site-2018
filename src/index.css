@@ -285,11 +285,14 @@ h1, h2, h3, h4, h5, h6, p {
   display: none;
 }
 
-nav a {
+nav .section {
   display: inline-block;
   position: relative;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.5);
+}
+nav .section:hover .navMenu {
+  display: block;
 }
 .black nav a {
   color: white;
@@ -298,9 +301,6 @@ nav a.active,
 nav a:hover {
   font-weight: bold;
   color: red;
-}
-nav a:hover .navMenu {
-  display: block;
 }
 
 .blogEntry {
@@ -410,33 +410,46 @@ nav a:hover .navMenu {
     color: black;
   }
 
-  nav a {
-    background: white;
-  }
-  .black nav a {
-    background: black;
-  }
-
-  .nameplate {
-    background: white;
-  }
+  .nameplate,
   .black .nameplate {
-    background: white;
-  }
+		background: white;
+	}
 
-  nav .section, 
-  nav .section a {
-    background: black;
-    color: white;
+  nav .section {
+    display: block;
   }
-  nav .section a.active {
-    color: red;
+  nav .sectionLink {
+		background: black;
+		color: white;
+	}
+  .navMenu {
+    display: block;
+    position: initial;
+    width: auto;
   }
-  .black nav .section,
-  .black nav .section a {
-    background: white;
-    color: black;
-  }
+  .navMenu a {
+		background: white;
+	}
+	nav .divider {
+		display: none;
+	}
+
+	.black nav .sectionLink {
+		background: white;
+		color: black;
+	}
+	.black .navMenu a {
+		background: black;
+		color: white;
+	}
+	.black nav a.active,
+	.black nav a:hover {
+		color: red;
+	}
+
+	.desktopOnly {
+		display: none !important;
+	}
 
   /*.story .photowrapperInner > img {*/
     /*transform: rotate(90deg);*/
