@@ -29,6 +29,9 @@ const photos = {
   travel: importAll(
     require.context('./photos/travel', false, /\.(png|jpe?g|svg)$/),
   ),
+  'nyc and antoinette': importAll(
+    require.context('./photos/nyc and antoinette', false, /\.(png|jpe?g|svg)$/),
+  ),
 };
 
 const PREAMBLES = {
@@ -47,6 +50,15 @@ const PREAMBLES = {
       <br />
       <br />with @senaponin, @thepigs, for @mcmintea
       <br />07.28.18
+    </div>
+  ),
+  'nyc and antoinette': (
+    <div className="preamble" key="preamble">
+      Leica CL buddies<br />
+      Minolta M-Rokkor 40mm f/2<br />
+      <br />
+      <br />raw scans from Sammy's
+      <br />10.13.18
     </div>
   ),
 };
