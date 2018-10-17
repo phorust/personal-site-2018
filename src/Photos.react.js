@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Helmet from 'react-helmet';
 
 import {importAll} from 'mngyuan-lib';
+import Topbar from './Topbar.react';
 
 const photos = {
   contacts: importAll(
@@ -91,6 +92,7 @@ const Photos = props => {
     <React.Fragment>
       <Helmet title="photo · Kevin Lee" />
       <Gallery>{elems}</Gallery>
+      <Topbar />
     </React.Fragment>
   );
 };

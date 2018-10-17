@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import Topbar from './Topbar.react';
+
 const Video = () => (
   <React.Fragment>
     <Helmet title="video · Kevin Lee" />
@@ -62,6 +64,7 @@ const Video = () => (
         />
       </div>
     </div>
+    <Topbar black />
   </React.Fragment>
 );
 

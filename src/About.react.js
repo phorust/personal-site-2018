@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+
 import ME_PHOTO from './photos/me alameda.jpg';
+import Topbar from './Topbar.react';
 
 const About = () => (
   <React.Fragment>
@@ -59,6 +61,7 @@ const About = () => (
         </a>
       </div>
     </div>
+    <Topbar />
   </React.Fragment>
 );
 

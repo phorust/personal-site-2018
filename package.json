@@ -43,5 +43,8 @@
     "trailingComma": "all",
     "bracketSpacing": false
   },
+  "reactSnap": {
+    "waitFor": 1000
+  },
   "homepage": "https://phorust.github.io"
 }

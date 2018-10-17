@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import Topbar from './Topbar.react';
+
 import BLURB_PHOTO from './blog/tam/L9997552.jpg';
 import COVER_PHOTO from './blog/tam/L9997560.jpg';
 import PHOTO_1 from './blog/tam/L9997541.jpg';
@@ -213,6 +215,12 @@ const BlogPage = (props: {
       post: string,
     },
   },
-}) => (props.match.params.post === 'mttam' ? <TamPost /> : null);
+}) =>
+  props.match.params.post === 'mttam' ? (
+    <React.Fragment>
+      {' '}
+      <TamPost /> <Topbar />{' '}
+    </React.Fragment>
+  ) : null;
 
 export default BlogPage;

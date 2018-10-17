@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Print from './Print';
 import {Gallery} from './Photos.react';
 import SinglePhotoGallery from './SinglePhotoGallery.react';
+import Topbar from './Topbar.react';
 
 const stories = {
   'oakland just yesterday': importAllAsArray(
@@ -58,6 +59,7 @@ const PrintPage = (props: {match: {params: {[string]: string}}}) => {
     <React.Fragment>
       <Helmet title="print · Kevin Lee" />
       <div className="story">{gallery}</div>
+      <Topbar />
     </React.Fragment>
   );
 };
