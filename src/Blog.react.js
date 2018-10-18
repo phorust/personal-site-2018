@@ -218,8 +218,8 @@ const BlogPage = (props: {
 }) =>
   props.match.params.post === 'mttam' ? (
     <React.Fragment>
-      {' '}
-      <TamPost /> <Topbar />{' '}
+      <TamPost />
+      <Topbar />
     </React.Fragment>
   ) : null;
 

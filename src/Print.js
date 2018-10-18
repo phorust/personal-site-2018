@@ -18,7 +18,7 @@ const Spacer = () => (
 
 // prettier-ignore
 const Stories = {
-  "those years will come someday": (photos) => (
+  "those-years-will-come-someday": (photos) => (
     <React.Fragment>
       <TextColumn>i guess</TextColumn>
       {photos['./71020004.jpeg']}
@@ -120,7 +120,7 @@ and i think that's ok.
     </React.Fragment>
   ),
 
-"oakland just yesterday": (photos) =>
+"oakland-just-yesterday": (photos) =>
   <React.Fragment><Spacer/><Spacer/>{photos}</React.Fragment>,
 
 "ghosts": (photos) =>

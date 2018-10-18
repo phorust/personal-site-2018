@@ -12,10 +12,10 @@ export const SETS = {
     ).reverse(),
     preamble: '',
   },
-  'kchaooo for oliviashihdesign': {
+  'kchaooo-for-oliviashihdesign': {
     photos: importAll(
       require.context(
-        './photos/kchaooo for oliviashihdesign',
+        './photos/kchaooo-for-oliviashihdesign',
         false,
         /\.(png|jpe?g|svg)$/,
       ),
@@ -30,10 +30,10 @@ export const SETS = {
       </div>
     ),
   },
-  'thepigs for mcmintea': {
+  'thepigs-for-mcmintea': {
     photos: importAll(
       require.context(
-        './photos/thepigs for mcmintea',
+        './photos/thepigs-for-mcmintea',
         false,
         /\.(png|jpe?g|svg)$/,
       ),
@@ -48,9 +48,9 @@ export const SETS = {
       </div>
     ),
   },
-  'lumohn in nyc': {
+  'lumohn-in-nyc': {
     photos: importAll(
-      require.context('./photos/lumohn in nyc', false, /\.(png|jpe?g|svg)$/),
+      require.context('./photos/lumohn-in-nyc', false, /\.(png|jpe?g|svg)$/),
     ),
   },
   travel: {
@@ -58,10 +58,10 @@ export const SETS = {
       require.context('./photos/travel', false, /\.(png|jpe?g|svg)$/),
     ),
   },
-  'nyc and antoinette': {
+  'nyc-and-antoinette': {
     photos: importAll(
       require.context(
-        './photos/nyc and antoinette',
+        './photos/nyc-and-antoinette',
         false,
         /\.(png|jpe?g|svg)$/,
       ),

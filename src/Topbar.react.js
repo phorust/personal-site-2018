@@ -17,18 +17,18 @@ const Topbar = (props: {black?: boolean}) => (
     </div>
     <nav>
       <Menu
-        menuHref="/photos/thepigs for mcmintea"
+        menuHref="/photos/thepigs-for-mcmintea"
         menuContent={
           <React.Fragment>
-            <NavLink to={{pathname: `/photos/thepigs for mcmintea`}}>
+            <NavLink to={{pathname: `/photos/thepigs-for-mcmintea`}}>
               @thepigs for @mcmintea
             </NavLink>
             <br />
-            <NavLink to={{pathname: `/photos/kchaooo for oliviashihdesign`}}>
+            <NavLink to={{pathname: `/photos/kchaooo-for-oliviashihdesign`}}>
               @kchaooo for @oliviashihdesign
             </NavLink>
             <br />
-            <NavLink to={{pathname: `/photos/lumohn in nyc`}}>
+            <NavLink to={{pathname: `/photos/lumohn-in-nyc`}}>
               @lumohn in nyc
             </NavLink>
             <br />
@@ -45,7 +45,7 @@ const Topbar = (props: {black?: boolean}) => (
           <React.Fragment>
             <NavLink to={{pathname: `/print/milkfat`}}>milkfat</NavLink>
             <br />
-            <NavLink to={{pathname: `/print/oakland just yesterday`}}>
+            <NavLink to={{pathname: `/print/oakland-just-yesterday`}}>
               oakland, just yesterday
             </NavLink>
             <br />

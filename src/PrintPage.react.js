@@ -8,9 +8,9 @@ import SinglePhotoGallery from './SinglePhotoGallery.react';
 import Topbar from './Topbar.react';
 
 export const STORIES = {
-  'oakland just yesterday': importAllAsArray(
+  'oakland-just-yesterday': importAllAsArray(
     require.context(
-      './stories/oakland just yesterday',
+      './stories/oakland-just-yesterday',
       false,
       /\.(png|jpe?g|svg)$/,
     ),
@@ -21,9 +21,9 @@ export const STORIES = {
   milkfat: importAllAsArray(
     require.context('./stories/milkfat', false, /\.(png|jpe?g|svg)$/),
   ),
-  'those years will come someday': importAllAsDict(
+  'those-years-will-come-someday': importAllAsDict(
     require.context(
-      './stories/those years will come someday',
+      './stories/those-years-will-come-someday',
       false,
       /\.(png|jpe?g|svg)$/,
     ),
