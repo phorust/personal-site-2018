@@ -75,6 +75,7 @@ export const SETS = {
         10.13.18<br />
       </div>
     ),
+    coverPhotoIndex: 33,
   },
 };
 
@@ -113,10 +114,11 @@ const Photos = props => {
   console.log(set);
   const photoElems = SETS[set].photos.map(src => <img key={src} src={src} />);
   const elems = ([SETS[set].preamble] || []).concat(photoElems);
+  const humanFriendlySetName = set.replace(/-/g, ' ');
   return (
     <React.Fragment>
-      <Helmet title={`${set} | photo · Kevin Lee`}>
-        <meta property="og:title" content={set} />
+      <Helmet title={`${humanFriendlySetName} | photo · Kevin Lee`}>
+        <meta property="og:title" content={humanFriendlySetName} />
         <meta
           property="og:image"
           content={SETS[set].photos[SETS[set].coverPhotoIndex || 0]}
