@@ -7,7 +7,7 @@ import {Gallery} from './Photos.react';
 import SinglePhotoGallery from './SinglePhotoGallery.react';
 import Topbar from './Topbar.react';
 
-const stories = {
+export const STORIES = {
   'oakland just yesterday': importAllAsArray(
     require.context(
       './stories/oakland just yesterday',
@@ -32,7 +32,7 @@ const stories = {
 
 const PrintPage = (props: {match: {params: {[string]: string}}}) => {
   const {match} = props;
-  const photoElems = stories[match.params.set];
+  const photoElems = STORIES[match.params.set];
   const gallery =
     match.params.set === 'milkfat' ? (
       <SinglePhotoGallery

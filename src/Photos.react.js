@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import {importAll} from 'mngyuan-lib';
 import Topbar from './Topbar.react';
 
-const SETS = {
+export const SETS = {
   contacts: {
     photos: importAll(
       require.context('./photos/contacts', false, /\.(png|jpe?g|svg)$/),

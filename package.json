@@ -44,7 +44,8 @@
     "bracketSpacing": false
   },
   "reactSnap": {
-    "waitFor": 1000
+    "waitFor": 1000,
+    "include": ["/", "/sitemap"]
   },
   "homepage": "https://phorust.github.io"
 }
