@@ -57,7 +57,6 @@ const App = () => (
         <meta property="og:image:width" content="279" />
         <meta property="og:image:height" content="279" />
         <meta property="og:description" content="@mngyuan" />
-        <meta property="og:url" content="http://mngyuan.com" />
         <meta
           property="og:image"
           content="http://mngyuan.com/og/og-image.jpg"
