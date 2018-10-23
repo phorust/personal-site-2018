@@ -77,6 +77,54 @@ export const SETS = {
     ),
     coverPhotoIndex: 33,
   },
+  'nyc-with-antoinette': {
+    photos: importAll(
+      require.context(
+        './photos/nyc-with-antoinette',
+        false,
+        /\.(png|jpe?g|svg)$/,
+      ),
+    ),
+    preamble: (
+      <div className="preamble" key="preamble">
+        exploring an abandoned building<br />
+        Minolta M-Rokkor 40mm f/2<br />
+        Portra 800 & 400<br />
+        <br />
+        raw scans from Sammy's <br />
+        10.21.18<br />
+      </div>
+    ),
+  },
+  'nyc-cinestill': {
+    photos: importAll(
+      require.context('./photos/nyc-cinestill', false, /\.(png|jpe?g|svg)$/),
+    ),
+    preamble: (
+      <div className="preamble" key="preamble">
+        new york on cinestill 800<br />
+        Minolta M-Rokkor 40mm f/2<br />
+        <br />
+        raw scans from Sammy's <br />
+        10.21.18<br />
+        art direction by @antoinette.chow<br />
+      </div>
+    ),
+  },
+  balloons: {
+    photos: importAll(
+      require.context('./photos/balloons', false, /\.(png|jpe?g|svg)$/),
+    ),
+    preamble: (
+      <div className="preamble" key="preamble">
+        Sony A7<br />
+        Minolta M-Rokkor 40mm f/2<br />
+        with @cringyg, @saschakoller, @speaksophli<br />
+        <br />
+        09.01.18<br />
+      </div>
+    ),
+  },
 };
 
 export class Gallery extends React.Component {
