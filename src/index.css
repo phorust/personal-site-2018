@@ -395,6 +395,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  overflow: scroll;
 }
 .contactSheetHeader > .headerInfo {
   white-space: pre-wrap;

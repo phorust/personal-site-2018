@@ -125,6 +125,11 @@ export const SETS = {
       </div>
     ),
   },
+  'to-matt': {
+    photos: importAll(
+      require.context('./photos/to-matt', false, /\.(png|jpe?g|svg)$/),
+    ),
+  },
 };
 
 export class Gallery extends React.Component {
