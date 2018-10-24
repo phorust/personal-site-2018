@@ -3,6 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Route, BrowserRouter, Switch} from 'react-router-dom';
 
+import Contacts from './Contacts.react';
 import Photos from './Photos.react';
 import Landing from './Landing.react';
 import PrintPage from './PrintPage.react';
@@ -65,6 +66,7 @@ const App = () => (
       </Helmet>
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route path="/photos/contacts/:set" component={Contacts} />
         <Route path="/photos/:set" component={Photos} />
         <Route path="/video" component={Video} />
         <Route path="/mix" component={Mix} />

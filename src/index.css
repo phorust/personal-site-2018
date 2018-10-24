@@ -387,6 +387,44 @@ nav a:hover {
   z-index: 2;
 }
 
+.contactSheet {
+  color: #f7f4ec;
+  width: 100%;
+}
+.contactSheetHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.contactSheetHeader > .headerInfo {
+  white-space: pre-wrap;
+  padding: 48px;
+}
+.contactSheetHeader > .headerInfo.secondary {
+  color: grey;
+}
+.contactSheetHeader > .headerInfo > .small {
+  font-size: small;
+}
+.contactSheet > .frames {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* hacky; the rotate hack means margin-top pushes this RIGHT,
+  off the screen. let's just make width smaller to fix this */
+  width: 95%;
+  margin-bottom: 100px;
+}
+.frames > .frame {
+  width: 10%;
+  position: relative;
+}
+.frames > .frame > img {
+  width: calc(2288 / 1535 * 100%);
+  margin-top: 50%;
+  transform: rotate(-90deg);
+}
+
 @media only screen and (max-width: 768px) {
   .photowrapper {
     height: 100vh;
