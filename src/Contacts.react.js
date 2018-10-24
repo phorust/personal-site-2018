@@ -109,7 +109,7 @@ const Contacts = (props: {match: {params: {set: string}}}) => {
           }
         />
       </Helmet>
-      <div className="page black">
+      <div className="page black film">
         <ContactSheet
           photos={CONTACT_SETS[set].photos}
           info={CONTACT_SETS[set].info}
