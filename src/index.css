@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
 
-body, html, #root {
+body,
+html,
+#root {
   width: 100%;
   margin: 0;
   font-family: 'Karla', sans-serif;
@@ -25,7 +27,13 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -37,7 +45,9 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
 }
 
-.kevin, .lee, .mngyuan {
+.kevin,
+.lee,
+.mngyuan {
   cursor: default;
   user-select: none;
   position: fixed;
@@ -46,7 +56,8 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 15vw;
   color: #f1f0f0;
 }
-.kevin, .lee {
+.kevin,
+.lee {
   font-family: 'Karla', sans-serif;
   font-weight: bold;
 }
@@ -88,7 +99,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .theOne {
@@ -272,7 +283,7 @@ h1, h2, h3, h4, h5, h6, p {
 .topbar .nameplate {
   font-size: 24px;
   font-family: 'Karla', sans-serif;
-  font-weight:  normal;
+  font-weight: normal;
 }
 .topbar.black .nameplate {
   color: white;
@@ -306,7 +317,7 @@ nav a:hover {
 .blogEntry {
   height: 100vh;
   background-color: #d3d8dc;
-  font-family: "Source Code Pro", sans-serif;
+  font-family: 'Source Code Pro', sans-serif;
 }
 .blogEntryInner {
   height: 100%;
@@ -370,7 +381,7 @@ nav a:hover {
 .flavorText {
   position: absolute;
   text-transform: uppercase;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   color: white;
   letter-spacing: 2em;
   z-index: 2;
@@ -412,48 +423,48 @@ nav a:hover {
 
   .nameplate,
   .black .nameplate {
-		background: white;
-	}
+    background: white;
+  }
 
   nav .section {
     display: block;
   }
   nav .sectionLink {
-		background: black;
-		color: white;
-	}
+    background: black;
+    color: white;
+  }
   .navMenu {
     display: block;
     position: initial;
     width: auto;
   }
   .navMenu a {
-		background: white;
-	}
-	nav .divider {
-		display: none;
-	}
+    background: white;
+  }
+  nav .divider {
+    display: none;
+  }
 
-	.black nav .sectionLink {
-		background: white;
-		color: black;
-	}
-	.black .navMenu a {
-		background: black;
-		color: white;
-	}
-	.black nav a.active,
-	.black nav a:hover {
-		color: red;
-	}
+  .black nav .sectionLink {
+    background: white;
+    color: black;
+  }
+  .black .navMenu a {
+    background: black;
+    color: white;
+  }
+  .black nav a.active,
+  .black nav a:hover {
+    color: red;
+  }
 
-	.desktopOnly {
-		display: none !important;
-	}
+  .desktopOnly {
+    display: none !important;
+  }
 
   /*.story .photowrapperInner > img {*/
-    /*transform: rotate(90deg);*/
-    /*margin: 0;*/
+  /*transform: rotate(90deg);*/
+  /*margin: 0;*/
   /*}*/
   .story .photowrapperInner {
     display: flex;
