@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Topbar from './Topbar.react';
 import {SETS} from './Photos.react';
 
-const CONTACT_SETS = {
+export const CONTACT_SETS = {
   ...SETS,
   'nyc-cinestill': {
     ...SETS['nyc-cinestill'],
