@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
+import {importAll} from 'mngyuan-lib';
 import Topbar from './Topbar.react';
 import {SETS} from './Photos.react';
 
@@ -8,6 +9,13 @@ export const CONTACT_SETS = {
   ...SETS,
   'nyc-cinestill': {
     ...SETS['nyc-cinestill'],
+    thumbs: importAll(
+      require.context(
+        './photos/nyc-cinestill/thumbs',
+        false,
+        /\.(png|jpe?g|svg)$/,
+      ),
+    ),
     info: {
       setName: '@lumohn at timesquare',
       filmstock: 'CINESTILL800',
@@ -19,6 +27,9 @@ export const CONTACT_SETS = {
   },
   'to-matt': {
     ...SETS['to-matt'],
+    thumbs: importAll(
+      require.context('./photos/to-matt/thumbs', false, /\.(png|jpe?g|svg)$/),
+    ),
     info: {
       setName: 'best of',
       filmstock: 'FILM & DIGITAL',
@@ -42,22 +53,21 @@ class ContactSheet extends React.PureComponent<
       location: string,
     },
   },
-  {currentPhoto: ?string},
+  {currentPhotoIndex: number},
 > {
   state = {
-    currentPhoto: this.props.photos[0],
+    currentPhotoIndex: 0,
   };
 
   render() {
-    const currentPhotoModal = this.state.currentPhoto ? (
-      <div className="currentPhotoModal">
-        <img src={this.state.currentPhoto} width="100%" />
-      </div>
-    ) : null;
-
     return (
       <div className="contactSheet">
-        {currentPhotoModal}
+        <div className="currentPhotoModal">
+          <img
+            src={this.props.photos[this.state.currentPhotoIndex]}
+            width="100%"
+          />
+        </div>
         <div className="contactSheetHeader">
           {this.props.info ? (
             <React.Fragment>
@@ -71,7 +81,7 @@ class ContactSheet extends React.PureComponent<
               <div className="headerInfo">
                 {this.props.info.rollNumber}
                 <br />
-                <span class="small">{this.props.info.rollTotal}</span>
+                <span className="small">{this.props.info.rollTotal}</span>
               </div>
               <div className="headerInfo secondary">
                 {this.props.info.flavorText}
@@ -81,10 +91,10 @@ class ContactSheet extends React.PureComponent<
           ) : null}
         </div>
         <div className="frames">
-          {this.props.photos.map(src => (
+          {this.props.thumbs.map((src, i) => (
             <div
               className="frame"
-              onClick={() => this.setState({currentPhoto: src})}
+              onClick={() => this.setState({currentPhotoIndex: i})}
             >
               <img src={src} />
             </div>
@@ -112,6 +122,7 @@ const Contacts = (props: {match: {params: {set: string}}}) => {
       <div className="page black film">
         <ContactSheet
           photos={CONTACT_SETS[set].photos}
+          thumbs={CONTACT_SETS[set].thumbs}
           info={CONTACT_SETS[set].info}
         />
       </div>

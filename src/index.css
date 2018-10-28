@@ -417,19 +417,17 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* hacky; the rotate hack means margin-top pushes this RIGHT,
-  off the screen. let's just make width smaller to fix this */
-  width: 95%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
   margin-bottom: 100px;
+  justify-content: space-between;
 }
 .frames > .frame {
-  width: 10%;
+  width: calc(10% - 4px);
   position: relative;
 }
 .frames > .frame > img {
-  width: calc(2288 / 1535 * 100%);
-  margin-top: 50%;
-  transform: rotate(-90deg);
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
