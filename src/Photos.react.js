@@ -130,6 +130,11 @@ export const SETS = {
       require.context('./photos/to-matt', false, /\.(png|jpe?g|svg)$/),
     ),
   },
+  chloe: {
+    photos: importAll(
+      require.context('./photos/chloe', false, /\.(png|jpe?g|svg)$/),
+    ),
+  },
 };
 
 export class Gallery extends React.Component {

@@ -39,6 +39,20 @@ export const CONTACT_SETS = {
       location: '奥克兰',
     },
   },
+  chloe: {
+    ...SETS['chloe'],
+    thumbs: importAll(
+      require.context('./photos/chloe/thumbs', false, /\.(png|jpe?g|svg)$/),
+    ),
+    info: {
+      setName: '@ch1oup',
+      filmstock: 'FUJI X',
+      rollNumber: '00',
+      rollTotal: 'of an ongoing series',
+      flavorText: 'bushwick',
+      location: '布鲁克林',
+    },
+  },
 };
 
 class ContactSheet extends React.PureComponent<
