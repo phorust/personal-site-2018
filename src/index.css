@@ -429,6 +429,20 @@ nav a:hover {
 .frames > .frame > img {
   width: 100%;
 }
+.frames > .frame > .fileName {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-weight: bold;
+  font-size: 10px;
+  color: rgba(255, 255, 33, 0.5);
+}
+.contactSheet > .downloadLink {
+  text-transform: uppercase;
+  color: grey;
+  display: block;
+  margin: 48px;
+}
 
 @media only screen and (max-width: 768px) {
   .photowrapper {
@@ -517,6 +531,23 @@ nav a:hover {
     width: auto;
     height: 100%;
     margin: 0;
+  }
+
+  .contactSheetHeader {
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  .contactSheetHeader > .headerInfo {
+    padding: 8px 0;
+    width: 50%;
+  }
+  .contactSheetHeader > .headerInfo:nth-child(even) {
+    text-align: right;
+  }
+  .frames > .frame {
+    width: calc(50% - 4px);
+    position: relative;
+    margin-right: 4px;
   }
 
   .photowrapperInner.single {

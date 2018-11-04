@@ -1,9 +1,12 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
+import {Link} from 'react-router-dom';
 
 import {importAll} from 'mngyuan-lib';
 import Topbar from './Topbar.react';
 import {SETS} from './Photos.react';
+
+const getFileNameFromPath = (s: string): string => s.split('/').reverse()[0];
 
 export const CONTACT_SETS = {
   ...SETS,
@@ -53,24 +56,45 @@ export const CONTACT_SETS = {
       location: '布鲁克林',
     },
   },
+  'nyc-eva': {
+    ...SETS['nyc-eva'],
+    thumbs: importAll(
+      require.context('./photos/nyc-eva/thumbs', false, /\.(png|jpe?g|svg)$/),
+    ),
+    info: {
+      setName: 'with eva',
+      filmstock: 'FUJI 400H',
+      rollNumber: '31/',
+      rollTotal: 'of an ongoing series',
+      flavorText: 'X',
+      location: '纽约',
+      downloadExists: true,
+      coverPhotoIndex: 11,
+    },
+  },
 };
 
 class ContactSheet extends React.PureComponent<
   {
     photos: Array<string>,
     children: React.Node,
+    downloadLink: string,
     info?: {
       setName: string,
       filmstock: string,
       rollNumber: string,
       flavorText: string,
       location: string,
+      downloadExists?: boolean,
+      coverPhotoIndex?: number,
     },
   },
   {currentPhotoIndex: number},
 > {
   state = {
-    currentPhotoIndex: 0,
+    currentPhotoIndex: this.props.info
+      ? this.props.info.coverPhotoIndex || 0
+      : 0,
   };
 
   render() {
@@ -111,15 +135,26 @@ class ContactSheet extends React.PureComponent<
               onClick={() => this.setState({currentPhotoIndex: i})}
             >
               <img src={src} />
+              <span className="fileName">
+                {getFileNameFromPath(src).split('.')[0] + '.JPG'}
+              </span>
             </div>
           ))}
         </div>
+        {this.props.info.downloadExists ? (
+          <Link
+            className="downloadLink desktopOnly"
+            to={this.props.downloadLink}
+          >
+            {getFileNameFromPath(this.props.downloadLink)}
+          </Link>
+        ) : null}
       </div>
     );
   }
 }
 
-const Contacts = (props: {match: {params: {set: string}}}) => {
+const Contacts = (props: {match: {url: string, params: {set: string}}}) => {
   const {set} = props.match.params;
   const humanFriendlySetName = set.replace(/-/g, ' ');
   return (
@@ -129,7 +164,9 @@ const Contacts = (props: {match: {params: {set: string}}}) => {
         <meta
           property="og:image"
           content={
-            CONTACT_SETS[set].photos[CONTACT_SETS[set].coverPhotoIndex || 0]
+            CONTACT_SETS[set].photos[
+              CONTACT_SETS[set].info.coverPhotoIndex || 0
+            ]
           }
         />
       </Helmet>
@@ -137,6 +174,7 @@ const Contacts = (props: {match: {params: {set: string}}}) => {
         <ContactSheet
           photos={CONTACT_SETS[set].photos}
           thumbs={CONTACT_SETS[set].thumbs}
+          downloadLink={props.match.url + '.zip'}
           info={CONTACT_SETS[set].info}
         />
       </div>
