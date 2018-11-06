@@ -25,6 +25,7 @@ export const CONTACT_SETS = {
       rollNumber: '29 & 30/',
       rollTotal: 'of an ongoing series',
       flavorText: 'art direction by @antoinette.chow',
+      downloadExists: true,
       location: '纽约',
     },
   },
