@@ -20,16 +20,16 @@ const Topbar = (props: {black?: boolean}) => (
         menuHref="/photos/thepigs-for-mcmintea"
         menuContent={
           <React.Fragment>
+            <NavLink to={{pathname: `/photos/contacts/nyc-cinestill`}}>
+              nyc on cinestill
+            </NavLink>
+            <br />
             <NavLink to={{pathname: `/photos/thepigs-for-mcmintea`}}>
               @thepigs for @mcmintea
             </NavLink>
             <br />
             <NavLink to={{pathname: `/photos/kchaooo-for-oliviashihdesign`}}>
               @kchaooo for @oliviashihdesign
-            </NavLink>
-            <br />
-            <NavLink to={{pathname: `/photos/lumohn-in-nyc`}}>
-              @lumohn in nyc
             </NavLink>
             <br />
             <NavLink to={{pathname: `/photos/travel`}}>travel</NavLink>
