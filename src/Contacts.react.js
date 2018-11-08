@@ -142,12 +142,12 @@ class ContactSheet extends React.PureComponent<
             </div>
           ))}
         </div>
-        {this.props.info.downloadExists ? (
+        {this.props.info.downloadExists && this.props.downloadLink ? (
           <Link
             className="downloadLink desktopOnly"
             to={this.props.downloadLink}
           >
-            {getFileNameFromPath(this.props.downloadLink)}
+            {this.props.downloadLink}
           </Link>
         ) : null}
       </div>
@@ -155,8 +155,10 @@ class ContactSheet extends React.PureComponent<
   }
 }
 
-const Contacts = (props: {match: {url: string, params: {set: string}}}) => {
-  const {set} = props.match.params;
+const Contacts = (props: {
+  match: {url: string, params: {set: string, downloadable: string}},
+}) => {
+  const {set, downloadable} = props.match.params;
   const humanFriendlySetName = set.replace(/-/g, ' ');
   return (
     <React.Fragment>
@@ -175,7 +177,7 @@ const Contacts = (props: {match: {url: string, params: {set: string}}}) => {
         <ContactSheet
           photos={CONTACT_SETS[set].photos}
           thumbs={CONTACT_SETS[set].thumbs}
-          downloadLink={props.match.url + '.zip'}
+          downloadLink={downloadable ? set + '.zip' : null}
           info={CONTACT_SETS[set].info}
         />
       </div>

@@ -17,7 +17,7 @@ const Topbar = (props: {black?: boolean}) => (
     </div>
     <nav>
       <Menu
-        menuHref="/photos/thepigs-for-mcmintea"
+        menuHref="/photos/contacts/nyc-cinestill"
         menuContent={
           <React.Fragment>
             <NavLink to={{pathname: `/photos/contacts/nyc-cinestill`}}>
