@@ -146,6 +146,7 @@ class ContactSheet extends React.PureComponent<
           <Link
             className="downloadLink desktopOnly"
             to={this.props.downloadLink}
+            target="_blank"
           >
             {this.props.downloadLink}
           </Link>
@@ -177,7 +178,7 @@ const Contacts = (props: {
         <ContactSheet
           photos={CONTACT_SETS[set].photos}
           thumbs={CONTACT_SETS[set].thumbs}
-          downloadLink={downloadable ? set + '.zip' : null}
+          downloadLink={downloadable ? `/photos/contacts/${set}.zip` : null}
           info={CONTACT_SETS[set].info}
         />
       </div>
