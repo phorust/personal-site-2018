@@ -5,9 +5,9 @@ this is a single page static github pages hosted site with routing by react-rout
 images are compressed using the following imagemagick commands:
 ```
 # regular images
-mogrify -strip -quality 60 -monitor -interlace Plane -geometry x1500 src/photos/to-matt/*.jpg
+mogrify -strip -quality 80 -monitor -interlace Plane -rotate "-90<" -geometry 1500x1500^ src/photos/to-matt/*.jpg
 # thumbnails
-mogrify -rotate "-90>" -geometry x500 src/photos/to-matt/thumbs/*.jpg
+mogrify -rotate "-90>" -geometry 500x500^ src/photos/to-matt/thumbs/*.jpg
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

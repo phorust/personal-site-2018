@@ -73,6 +73,26 @@ export const CONTACT_SETS = {
       coverPhotoIndex: 11,
     },
   },
+  'lisa-at-home': {
+    ...SETS['lisa-at-home'],
+    thumbs: importAll(
+      require.context(
+        './photos/lisa-at-home/thumbs',
+        false,
+        /\.(png|jpe?g|svg)$/,
+      ),
+    ),
+    info: {
+      setName: 'lisa at home',
+      filmstock: '5D3',
+      rollNumber: '/',
+      rollTotal: 'of an ongoing series',
+      flavorText: '35L',
+      location: '伯克利',
+      downloadExists: true,
+      coverPhotoIndex: 10,
+    },
+  },
 };
 
 class ContactSheet extends React.PureComponent<
