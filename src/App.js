@@ -66,10 +66,7 @@ const App = () => (
       </Helmet>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route
-          path="/photos/contacts/:set/:downloadable?"
-          component={Contacts}
-        />
+        <Route path="/photos/contacts/:set" component={Contacts} />
         <Route path="/photos/:set" component={Photos} />
         <Route path="/video" component={Video} />
         <Route path="/mix" component={Mix} />

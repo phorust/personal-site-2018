@@ -179,7 +179,12 @@ class ContactSheet extends React.PureComponent<
 const Contacts = (props: {
   match: {url: string, params: {set: string, downloadable: string}},
 }) => {
-  const {set, downloadable} = props.match.params;
+  const queryParams =
+    URLSearchParams && typeof URLSearchParams === 'function' // not in IE
+      ? new URLSearchParams(window.location.search)
+      : null;
+  const downloadable = queryParams ? queryParams.get('downloadable') : false;
+  const {set} = props.match.params;
   const humanFriendlySetName = set.replace(/-/g, ' ');
   return (
     <React.Fragment>
