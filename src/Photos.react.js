@@ -58,42 +58,9 @@ export const SETS = {
       require.context('./photos/travel', false, /\.(png|jpe?g|svg)$/),
     ),
   },
-  'nyc-and-antoinette': {
+  'nyc-antoinette': {
     photos: importAll(
-      require.context(
-        './photos/nyc-and-antoinette',
-        false,
-        /\.(png|jpe?g|svg)$/,
-      ),
-    ),
-    preamble: (
-      <div className="preamble" key="preamble">
-        Leica CL buddies<br />
-        Minolta M-Rokkor 40mm f/2<br />
-        <br />
-        raw scans from Sammy's <br />
-        10.13.18<br />
-      </div>
-    ),
-    coverPhotoIndex: 33,
-  },
-  'nyc-with-antoinette': {
-    photos: importAll(
-      require.context(
-        './photos/nyc-with-antoinette',
-        false,
-        /\.(png|jpe?g|svg)$/,
-      ),
-    ),
-    preamble: (
-      <div className="preamble" key="preamble">
-        exploring an abandoned building<br />
-        Minolta M-Rokkor 40mm f/2<br />
-        Portra 800 & 400<br />
-        <br />
-        raw scans from Sammy's <br />
-        10.21.18<br />
-      </div>
+      require.context('./photos/nyc-antoinette', false, /\.(png|jpe?g|svg)$/),
     ),
   },
   'nyc-cinestill': {

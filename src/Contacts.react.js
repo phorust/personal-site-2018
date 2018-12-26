@@ -93,6 +93,26 @@ export const CONTACT_SETS = {
       coverPhotoIndex: 10,
     },
   },
+  'nyc-antoinette': {
+    ...SETS['nyc-antoinette'],
+    thumbs: importAll(
+      require.context(
+        './photos/nyc-antoinette/thumbs',
+        false,
+        /\.(png|jpe?g|svg)$/,
+      ),
+    ),
+    info: {
+      setName: 'to antoinette',
+      filmstock: 'fujicolor 100 & 200',
+      rollNumber: '26-28/',
+      rollTotal: 'of an ongoing series',
+      flavorText: 'portra 400 & 800',
+      location: '纽约',
+      downloadExists: true,
+      coverPhotoIndex: 10,
+    },
+  },
 };
 
 class ContactSheet extends React.PureComponent<
