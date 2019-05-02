@@ -1,10 +1,13 @@
-import {importAllAsArray, importAllAsDict} from 'mngyuan-lib';
+import {
+  importAllAsArray,
+  importAllAsDict,
+  SinglePhotoGallery,
+} from 'mngyuan-lib';
 import React from 'react';
 import Helmet from 'react-helmet';
 
 import Print from './Print';
 import {Gallery} from './Photos.react';
-import SinglePhotoGallery from './SinglePhotoGallery.react';
 import Topbar from './Topbar.react';
 
 export const STORIES = {
@@ -35,23 +38,28 @@ const PrintPage = (props: {match: {params: {[string]: string}}}) => {
   const photoElems = STORIES[match.params.set];
   const gallery =
     match.params.set === 'milkfat' ? (
-      <SinglePhotoGallery
-        photoElems={[
-          <React.Fragment>
-            <div className="preamble">
-              milkfat<br />
-              zine<br />
-              <br />
-              milkfat is a celebration of dairy and dairy-related packaging,
-              <br />
-              and an excuse to compile fresh photos.
-              <br />07.28.18
-            </div>
-            {photoElems[0]}
-          </React.Fragment>,
-          ...photoElems.slice(1),
-        ]}
-      />
+      <div className="page">
+        <div className="photowrapper">
+          <SinglePhotoGallery
+            className="photowrapperInner single"
+            photoElems={[
+              <React.Fragment>
+                <div className="preamble">
+                  milkfat<br />
+                  zine<br />
+                  <br />
+                  milkfat is a celebration of dairy and dairy-related packaging,
+                  <br />
+                  and an excuse to compile fresh photos.
+                  <br />07.28.18
+                </div>
+                {photoElems[0]}
+              </React.Fragment>,
+              ...photoElems.slice(1),
+            ]}
+          />
+        </div>
+      </div>
     ) : (
       <Gallery>{Print[match.params.set](photoElems)}</Gallery>
     );
